@@ -1,0 +1,18 @@
+id: MtLineNotifyPost
+name: <__trans phrase="MtLineNotifyPost L10N">
+version: 1.0
+description: <__trans phrase="_PLUGIN_DESCRIPTION">
+author_name: <__trans phrase="_PLUGIN_AUTHOR">
+l10n_class: MtLineNotifyPost::L10N
+
+
+system_config_template: system.tmpl
+settings:
+    line_token:
+        scope: system
+
+
+callbacks:
+  cms_post_save.entry: $MtLineNotifyPost::MtLineNotifyPost::CMS::post_entry
+  cms_post_edit.entry: $MtLineNotifyPost::MtLineNotifyPost::CMS::post_entry
+  MT::App::CMS::template_source.footer: $MtLineNotifyPost::MtLineNotifyPost::CMS::template_source_footer

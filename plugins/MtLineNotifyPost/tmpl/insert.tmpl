@@ -1,0 +1,17 @@
+<script>
+   (function ($) {
+        if ($("#unpublished_on-field").length) {
+            console.log("hoge");
+            $("#unpublished_on-field").after(`
+            <ul class="list-unstyled last-child">
+                <li class="first-child last-child">
+                <div class="form-check first-child last-child">
+                    <input type="checkbox" name="line_notify_check" id="line_notify_check" value="1" class="form-check-input cb first-child">
+                    <label class="form-check-label last-child" for="line_notify_check">LINE Notifyに通知を送信する</label>
+                </div>
+                </li>
+            </ul>
+            `);
+        }
+    })(jQuery);
+</script>
